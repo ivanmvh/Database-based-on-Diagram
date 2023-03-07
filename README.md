@@ -1,5 +1,5 @@
 <div align="center">
-  <h3><b>Hospital Schema</b></h3>
+  <h3><b>Clinic Schema</b></h3>
 </div>
 
 <img src="schema.png" alt="schema" height="auto" />
@@ -18,7 +18,7 @@ This repository includes files with plain SQL that can be used to recreate a dat
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Hospital Schema\] ](#-hospital-schema-)
+- [📖 \[Clinic Schema\] ](#-Clinic-schema-)
   - [🛠 Built With SQL](#-built-with-sql)
     - [Tech Stack PostgreSQL](#tech-stack-postgresql)
   - [💻 Getting Started ](#-getting-started-)
@@ -28,9 +28,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
   - [⭐️ Show your support ](#️-show-your-support-)
   - [📝 License ](#-license-)
 
-# 📖 [Hospital Schema] <a name="about-project"></a>
+# 📖 [Clinic Schema] <a name="about-project"></a>
 
-**[Hospital Schema]** is a project that interpret a database diagram and implement the SQL.
+**[Clinic Schema]** is a project that interpret a database diagram and implement the SQL.
 
 ## 🛠 Built With <a name="built-with">SQL</a>
 
@@ -41,8 +41,10 @@ This repository includes files with plain SQL that can be used to recreate a dat
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
+  <ul>
+    <li><a href="https://drawsql.app/teams/im-team/diagrams/clinic">drawsql diagram</a></li>
+  </ul>
 </details>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -51,8 +53,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 This repository includes files with plain SQL that can be used to recreate a database:
 
 - Use schema.sql to create all tables.
-- Use data.sql to populate tables with sample data.
-- Check queries.sql for examples of queries that can be run on a newly created database. Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!
 
 
 ### Setup
@@ -62,7 +62,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/carreraprogrammer/database_from_diagram.git
+  git clone https://github.com/ivanmvh/database_from_diagram.git
 ```
 
 ## 👥 Authors <a name="authors"></a>
@@ -84,7 +84,7 @@ Clone this repository to your desired folder:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/carreraprogrammer/database_from_diagram/issues).
+Feel free to check the [issues page](https://github.com/ivanmvh/database_from_diagram/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
