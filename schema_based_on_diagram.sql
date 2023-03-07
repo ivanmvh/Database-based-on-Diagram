@@ -1,9 +1,9 @@
 CREATE TABLE "medical_his_treatments"(
-    "id_medical_his" BIGINT NOT NULL,
+    "id" BIGINT NOT NULL,
     "id_treatments" BIGINT NOT NULL
 );
 ALTER TABLE
-    "medical_his_treatments" ADD PRIMARY KEY("id_medical_his");
+    "medical_his_treatments" ADD PRIMARY KEY("id");
 CREATE TABLE "invoices"(
     "id" BIGINT NOT NULL,
     "total_amount" DECIMAL(8, 2) NOT NULL,
@@ -56,4 +56,4 @@ ALTER TABLE
 ALTER TABLE
     "invoice_items" ADD CONSTRAINT "invoice_items_treatment_id_foreign" FOREIGN KEY("treatment_id") REFERENCES "treatments"("id");
 ALTER TABLE
-    "medical_his_treatments" ADD CONSTRAINT "medical_his_treatments_id_medical_his_foreign" FOREIGN KEY("id_medical_his") REFERENCES "medical_histories"("id");
+    "medical_his_treatments" ADD CONSTRAINT "medical_his_treatments_id_medical_his_foreign" FOREIGN KEY("id") REFERENCES "medical_histories"("id");
