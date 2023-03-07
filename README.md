@@ -90,7 +90,6 @@ Feel free to check the [issues page](https://github.com/carreraprogrammer/databa
 
 ## ⭐️ Show your support <a name="support"></a>
 
-
 If you like this project I really appreciate if you can give me a star and follow me
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
