@@ -1,5 +1,5 @@
 CREATE TABLE "medical_his_treatments"(
-    "id_medical_his" BIGINT NOT NULL,
+    "id" BIGINT NOT NULL,
     "id_treatments" BIGINT NOT NULL
 );
 
@@ -7,10 +7,7 @@ CREATE INDEX "medical_his_treatments_id_treatments_index" ON
     "medical_his_treatments"("id_treatments");
 
 ALTER TABLE
-    "medical_his_treatments" ADD PRIMARY KEY("id_medical_his", "id_treatments");
-
-CREATE INDEX "medical_his_treatments_id_medical_his_index" ON
-    "medical_his_treatments"("id_medical_his");
+    "medical_his_treatments" ADD PRIMARY KEY("id");
 
 CREATE TABLE "invoices"(
     "id" BIGINT NOT NULL,
@@ -20,11 +17,12 @@ CREATE TABLE "invoices"(
     "medical_history_id" INTEGER NOT NULL
 );
 
+ALTER TABLE
+    "invoices" ADD PRIMARY KEY("id");
+
 CREATE INDEX "invoices_medical_history_id_index" ON
     "invoices"("medical_history_id");
 
-ALTER TABLE
-    "invoices" ADD PRIMARY KEY("id");
 
 CREATE TABLE "patients"(
     "id" BIGINT NOT NULL,
@@ -51,11 +49,11 @@ CREATE TABLE "medical_histories"(
     "status" VARCHAR(255) NOT NULL
 );
 
-CREATE INDEX "medical_histories_patient_id_index" ON
-    "medical_histories"("patient_id");
-
 ALTER TABLE
     "medical_histories" ADD PRIMARY KEY("id");
+
+CREATE INDEX "medical_histories_patient_id_index" ON
+    "medical_histories"("patient_id");
 
 CREATE TABLE "invoice_items"(
     "id" BIGINT NOT NULL,
@@ -66,16 +64,17 @@ CREATE TABLE "invoice_items"(
     "treatment_id" INTEGER NOT NULL
 );
 
+ALTER TABLE
+    "invoice_items" ADD PRIMARY KEY("id");
+
 CREATE INDEX "invoice_items_invoice_id_index" ON
     "invoice_items"("invoice_id");
 
 CREATE INDEX "invoice_items_treatment_id_index" ON
     "invoice_items"("treatment_id");
 
--- Foreing keys
 
-ALTER TABLE
-    "invoice_items" ADD PRIMARY KEY("id");
+-- Foreing keys
 
 ALTER TABLE
     "medical_his_treatments" ADD CONSTRAINT "medical_his_treatments_id_treatments_foreign" FOREIGN KEY("id_treatments") REFERENCES "treatments"("id");
@@ -93,4 +92,4 @@ ALTER TABLE
     "invoice_items" ADD CONSTRAINT "invoice_items_treatment_id_foreign" FOREIGN KEY("treatment_id") REFERENCES "treatments"("id");
 
 ALTER TABLE
-    "medical_his_treatments" ADD CONSTRAINT "medical_his_treatments_id_medical_his_foreign" FOREIGN KEY("id_medical_his") REFERENCES "medical_histories"("id");
+    "medical_his_treatments" ADD CONSTRAINT "medical_his_treatments_id_foreign" FOREIGN KEY("id") REFERENCES "medical_histories"("id");
